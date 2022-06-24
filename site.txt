@@ -1,0 +1,40 @@
+Início, Sobre, Hospedagem, Contato
+
+Início
+
+Uma bela imagem ou slides que ocupam a tela e tem um achamada para ação (formulário)
+
+
+ <style>
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+</style>
+
+CSS rules to specify families
+
+    font-family: 'Lato', sans-serif;
+	
+	
+Sobre
+
+Texto sobre a pousada.
+
+
+Hospedagem 
+
+Tabela com preços de hospedagem e com pr
+ especiais de feriados e 
+ 
+Contato
+ 
+Formulário de contato com:
+ 
+Nome, E-mail, Mensagem, botão de Enviar
+
+localização, talvez um mapa do google
+
+https://www.cvc.com.br/
+https://www.decolar.com/
+https://www.hurb.com/br
+https://www.azulviagens.com.br/
+https://123milhas.com/viagens/agencia-de-viagens
+https://www.anvitur.com.br
