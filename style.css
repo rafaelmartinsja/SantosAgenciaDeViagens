@@ -1,0 +1,14 @@
+* {
+
+    font-family: 'Lato', sans-serif;
+
+}
+
+footer {
+    padding: 15px;
+    height: 30px;
+}
+
+footer p {
+    text-align: center;
+}
