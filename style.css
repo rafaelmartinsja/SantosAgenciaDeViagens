@@ -12,3 +12,8 @@ footer {
 footer p {
     text-align: center;
 }
+
+.promocao-image-card {
+    width: 320px;
+    height: 250px;
+}
