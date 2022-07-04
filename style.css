@@ -2,18 +2,28 @@
     font-family: 'Lato', sans-serif;
 }
 
-.cor-rodape {
-    background-color: var(--bs-yellow);
-    padding: 15px;
-    height: 30px;
+main {
+    padding: 30px 0;
+    margin: 10px 0;
+    min-height: calc(100vh - 205px);
 }
 
-.cor-rodape p {
+footer {
+    background-color: var(--bs-yellow);
+    padding: 15px;
+}
+
+footer p {
     text-align: center;
 
 }
 
 .promocao-image-card {
+    object-fit: cover;
     width: 320px;
     height: 250px;
+}
+
+.card-img {
+    height: 100%;
 }
