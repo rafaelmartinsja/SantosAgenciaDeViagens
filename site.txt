@@ -38,3 +38,17 @@ https://www.hurb.com/br
 https://www.azulviagens.com.br/
 https://123milhas.com/viagens/agencia-de-viagens
 https://www.anvitur.com.br
+
+--bs-yellow: #ffc107;
+
+Problemas
+
+Slide da home page não volta e não aparece todos os slides, meio que trava.
+
+Rodapé não preenche 100%.
+
+Pagina destino e Contato precisam ter seu conteudo alinhado.
+
+Pagina promoçoes, quero que a imagem fique em 3x colunas sem a borda, ocupe apenas o tamanho da mesma.
+
+

@@ -1,16 +1,16 @@
 * {
-
     font-family: 'Lato', sans-serif;
-
 }
 
-footer {
+.cor-rodape {
+    background-color: var(--bs-yellow);
     padding: 15px;
     height: 30px;
 }
 
-footer p {
+.cor-rodape p {
     text-align: center;
+
 }
 
 .promocao-image-card {
