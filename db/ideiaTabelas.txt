@@ -1,0 +1,13 @@
+clientes
+cli_clientes
+cli_nome
+cli_email
+cli_cpf
+cli_nascimento
+cli_telefone
+
+viagens
+via_ida
+via_volta
+destinos
+diaria
