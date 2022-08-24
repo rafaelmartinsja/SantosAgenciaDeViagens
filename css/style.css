@@ -27,3 +27,8 @@ footer p {
 .card-img {
     height: 100%;
 }
+
+.padding-h2 {
+    padding-top: 25px;
+    padding-bottom: 40px;
+}
