@@ -1,2 +1,2 @@
 # SantosAgenciaDeViagens
-Site simples, utilizando html, css e bootstrap para o curso RecodePro 2022.
+Agência de viagens Santos, Tecnologias empregadas: html, css e bootstrap5 curso RecodePro 2022.
