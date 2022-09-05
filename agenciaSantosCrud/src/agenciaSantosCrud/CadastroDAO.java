@@ -62,13 +62,14 @@ public class CadastroDAO {
 			rset = pstm.executeQuery();
 
 			while (rset.next()) {
+				
 				Cadastro clientes1 = new Cadastro();
 
 				clientes1.setId(rset.getInt("cod_cli"));
 
 				clientes1.setNome(rset.getString("nome_cli"));
 
-				clientes1.add(clientes1);
+				clientes.add(clientes1);
 
 			}
 
@@ -77,9 +78,6 @@ public class CadastroDAO {
 
 		} finally {
 			try {
-				if (rset != null) {
-					rset.close();
-				}
 				if (pstm != null) {
 					pstm.close();
 				}
@@ -93,10 +91,11 @@ public class CadastroDAO {
 
 		return clientes;
 	}
+	
+	
 	// Metodo pra atualizar
-
 	public void update(Cadastro clientes) {
-		String sql = "UPDATE clientess set nome_clientes = ? where id_clientes = ?;";
+		String sql = "UPDATE clientes set nome_cli = ? where cod_cli = ?;";
 
 		try {
 			conn = Conexao.createConnectionMySQL();
@@ -126,15 +125,15 @@ public class CadastroDAO {
 	}
 
 	// Metodo para deletar
-	public void deleteById(int id) {
-		String sql = "DELETE FROM clientess WHERE id_clientes = ?";
+	public void deleteById(int cod_cli) {
+		String sql = "DELETE FROM clientes WHERE cod_cli = ?";
 
 		try {
 			conn = Conexao.createConnectionMySQL();
 
 			pstm = conn.prepareStatement(sql);
 
-			pstm.setInt(1, id);
+			pstm.setInt(1, cod_cli);
 
 			pstm.execute();
 
@@ -153,47 +152,7 @@ public class CadastroDAO {
 			}
 		}
 	}
-
-	public Cadastro getclientesById(int id) {
-		String sql = "SELECT * FROM clientess WHERE id_clientes = ?;";
-
-		Cadastro clientes = new Cadastro();
-
-		ResultSet rset = null;
-
-		try {
-			conn = Conexao.createConnectionMySQL();
-
-			pstm = conn.prepareStatement(sql);
-
-			pstm.setInt(1, id);
-
-			rset = pstm.executeQuery();
-
-			rset.next();
-
-			clientes.setId(rset.getInt("id_clientes"));
-
-			clientes.setNome(rset.getString("nome_clientes"));
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				if (pstm != null) {
-					pstm.close();
-				}
-				if (conn != null) {
-					conn.close();
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}
-
-		return clientes;
-	}
-
+	
 	public void removeById(int codigo) {
 		// TODO Auto-generated method stub
 		

@@ -25,7 +25,7 @@ public class Conexao {
 		
 		// testar a conex�o 
 		if (con != null) {
-			System.out.println(con + "\n\n ****  Conex�o obtida com sucesso!  ****");
+			System.out.println(con + "\n\n ****  Conexão obtida com sucesso!  ****");
 			con.close();
 		}
 	}

@@ -1,7 +1,8 @@
 package agenciaSantosCrud;
 
-import java.util.Date;
 import java.util.Scanner;
+
+
 
 public class Principal {
 
@@ -13,7 +14,6 @@ public class Principal {
 		Scanner entrada = new Scanner(System.in);
 		int opcao = 0;
 		String nome = "";
-		int idade = 0;
 		int codigo = 0;
 
 		do {
@@ -23,8 +23,7 @@ public class Principal {
 			System.out.println("2 - Excluir cadastro");
 			System.out.println("3 - Atualizar cadastro");
 			System.out.println("4 - Mostrar cadastros");
-			System.out.println("5 - Buscar por ID");
-			System.out.println("6 - Sair");
+			System.out.println("5 - Sair");
 			opcao = entrada.nextInt();
 
 			switch (opcao) {
@@ -32,12 +31,6 @@ public class Principal {
 				System.out.println("Digite o nome do cadastro: ");
 				nome = entrada.next();
 				cadastro.setNome(nome);
-
-				System.out.println("Digite a idade do cadastro: ");
-				idade = entrada.nextInt();
-				cadastro.setIdade(idade);
-
-				cadastro.setDataCadastro(new Date());
 
 				cadastroDAO.save(cadastro);
 				break;
@@ -47,7 +40,7 @@ public class Principal {
 				try {
 					codigo = entrada.nextInt();
 					
-					cadastroDAO.removeById(codigo);
+					cadastroDAO.deleteById(codigo);
 					
 				} catch (Exception e) {
 					// e.getMessage();
@@ -66,53 +59,33 @@ public class Principal {
 				nome = entrada.next();
 				cadastro.setNome(nome);
 
-				System.out.println("Digite a nova idade do cadastro: ");
-				idade = entrada.nextInt();
-				cadastro.setIdade(idade);
-
-				cadastro.setDataCadastro(new Date());
-
 				cadastro.setId(codigo);
 
 				cadastroDAO.update(cadastro);
 			}
 			case 4: {
-				for (Cadastro c : CadastroDAO.getcadastros()) {
-
-					System.out.println("NOME: " + c.getNome());
-					System.out.println("IDADE: " + c.getIdade());
-					System.out.println("DATA CADASTRO: " + c.getDataCadastro());
-
-					System.out.println("----------------------------------- ");
+				// READ
+				try {
+					for (Cadastro c2: cadastroDAO.getClientes()) {
+			            System.out.println("Nome: " + c2.getNome());
+			            System.out.println("-------------------------------");
+			        }
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				}
-				break;
 			}
-			case 5: {
-
-				System.out.print("Digite o ID para buscar: ");
-				int id = entrada.nextInt();
+				break;
 				
-				Cadastro c = new Cadastro();
-
-				c = cadastroDAO.getcadastroById(id);
-
-				System.out.println("NOME: " + c.getNome());
-				System.out.println("IDADE: " + c.getIdade());
-				System.out.println("DATA CADASTRO: " + c.getDataCadastro());
-
-				System.out.println("----------------------------------- ");
-			}
-				break;
-
-			case 6: {
+						
+			case 5: {
 				System.out.println(" === Obrigado por usar nossa Agenda === ");
 				break;
 			}
 			default:
 				System.out.println("Opcao invalida: ");
 
-			}
-			;
+			};
 
 		} while (opcao != 6);
 

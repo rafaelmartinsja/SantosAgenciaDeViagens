@@ -5,7 +5,7 @@ import java.util.Date;
 public class Cadastro {
 
 	// Atributos
-	private int id;
+	private int cod_cli;
 	private String nome;
 	
 	//Contrutores
@@ -13,17 +13,17 @@ public class Cadastro {
 	}
 	
 	public Cadastro(int id, String nome) {
-		this.id = id;
+		this.cod_cli = id;
 		this.nome = nome;
 	}
 	//Getters e Setters
 
 	public int getId() {
-		return id;
+		return cod_cli;
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		this.cod_cli = id;
 	}
 
 	public String getNome() {
@@ -37,7 +37,7 @@ public class Cadastro {
 
 	@Override
 	public String toString() {
-		return "Cadastro [id=" + id + ", nome=" + nome + "]";
+		return "Cadastro [id=" + cod_cli + ", nome=" + nome + "]";
 	}
 
 	public void add(Cadastro clientes) {
