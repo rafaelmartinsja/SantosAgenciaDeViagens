@@ -12,8 +12,9 @@ public class CadastroDAO {
 	PreparedStatement pstm = null;
 
 	// Metodo pra salvar
-	public void save(Cadastro clientes) {
-		String sql = "INSERT INTO clientes (nome_cli) values(?);";
+	
+	public void save(Cadastro Clientes) {
+		String sql = "INSERT INTO Clientes (nome_clientes, cpf_clientes, data_nasci_clientes)" + "values (?,?,?)";
 
 		try {
 			// Cria uma conexao com o banco
@@ -23,9 +24,13 @@ public class CadastroDAO {
 			pstm = conn.prepareStatement(sql);
 
 			// Adicionar o valor do primeiro parametro da sql
-			pstm.setString(1, clientes.getNome());
+			pstm.setString(1, Clientes.getNome_clientes());
+			
+			pstm.setString(2, Clientes.getCpf_clientes());
+			
+			pstm.setString(3, Clientes.getData_nasci_clientes());
 
-			// Executar a sql para inser��o dos dados
+			// Executar a sql para inserção dos dados
 			pstm.execute();
 
 		} catch (Exception e) {
@@ -46,8 +51,9 @@ public class CadastroDAO {
 	}
 
 	// Metodo para Ler
+	
 	public List<Cadastro> getClientes() {
-		String sql = "select * from clientes;";
+		String sql = "select * from Clientes;";
 
 		List<Cadastro> clientes = new ArrayList<Cadastro>();
 
@@ -65,10 +71,14 @@ public class CadastroDAO {
 				
 				Cadastro clientes1 = new Cadastro();
 
-				clientes1.setId(rset.getInt("cod_cli"));
+				clientes1.setId(rset.getInt("id_clientes"));
 
-				clientes1.setNome(rset.getString("nome_cli"));
-
+				clientes1.setNome_clientes(rset.getString("nome_clientes"));
+				
+				clientes1.setCpf_clientes(rset.getString("cpf_clientes"));
+			
+				clientes1.setData_nasci_clientes(rset.getString("data_nasci_clientes"));
+		
 				clientes.add(clientes1);
 
 			}
@@ -92,19 +102,24 @@ public class CadastroDAO {
 		return clientes;
 	}
 	
-	
 	// Metodo pra atualizar
-	public void update(Cadastro clientes) {
-		String sql = "UPDATE clientes set nome_cli = ? where cod_cli = ?;";
-
+	
+	public void update(Cadastro Clientes) {
+		String sql = "UPDATE clientes SET nome_clientes = ?, cpf_clientes = ?, data_nasci_clientes = ?" + "where id_clientes = ?";
+		
 		try {
 			conn = Conexao.createConnectionMySQL();
 
 			pstm = conn.prepareStatement(sql);
 
-			pstm.setString(1, clientes.getNome());
-
-			pstm.setInt(2, clientes.getId());
+			pstm.setString(1, Clientes.getNome_clientes());
+			
+			pstm.setString(2, Clientes.getCpf_clientes());
+			
+			pstm.setString(3, Clientes.getData_nasci_clientes());
+			
+			// Serve para não realizar todos os updates
+			pstm.setInt(4, Clientes.getId());
 
 			pstm.execute();
 
@@ -125,15 +140,16 @@ public class CadastroDAO {
 	}
 
 	// Metodo para deletar
-	public void deleteById(int cod_cli) {
-		String sql = "DELETE FROM clientes WHERE cod_cli = ?";
+	
+	public void deleteById(int id_clientes) {
+		String sql = "DELETE FROM clientes WHERE id_clientes = ?";
 
 		try {
 			conn = Conexao.createConnectionMySQL();
 
 			pstm = conn.prepareStatement(sql);
 
-			pstm.setInt(1, cod_cli);
+			pstm.setInt(1, id_clientes);
 
 			pstm.execute();
 
@@ -153,18 +169,11 @@ public class CadastroDAO {
 		}
 	}
 	
-	public void removeById(int codigo) {
-		// TODO Auto-generated method stub
-		
-	}
-
 	public static Cadastro[] getcadastros() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	public Cadastro getcadastroById(int id) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 }
