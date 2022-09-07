@@ -7,8 +7,10 @@ public class Viagens {
 	private int id_viagens;
 	private String origem_viagens;
 	private String data_destino_viagens;
-	private String destino_viagens;
+	private static String destino_viagens;
 	private String data_origem_viagens;
+	public String getData_origem_viagens;
+	public String getId_clientes;
 	
 	//Contrutores
 
@@ -41,12 +43,8 @@ public class Viagens {
 		this.data_destino_viagens = data_destino_viagens;
 	}
 
-	public String getDestino_viagens() {
+	public static String getDestino_viagens() {
 		return destino_viagens;
-	}
-
-	public void setDestino_viagens(String destino_viagens) {
-		this.destino_viagens = destino_viagens;
 	}
 
 	public String getData_origem_viagens() {
@@ -55,6 +53,16 @@ public class Viagens {
 
 	public void setData_origem_viagens(String data_origem_viagens) {
 		this.data_origem_viagens = data_origem_viagens;
+	}
+
+	public void setDestino_viagens(String destino_viagens2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public String getNome_clientes() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

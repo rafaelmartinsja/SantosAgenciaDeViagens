@@ -176,4 +176,14 @@ public class CadastroDAO {
 	public Cadastro getcadastroById(int id) {
 		return null;
 	}
+
+	public void removeById(int id_clientes) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Cadastro[] getCadastros() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

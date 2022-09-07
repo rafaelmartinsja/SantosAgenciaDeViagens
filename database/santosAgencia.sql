@@ -1,27 +1,28 @@
 -- Geração de Modelo físico
 -- Sql ANSI 2003 - brModelo.
-
-
+drop database santosagencia;
+create database santosAgencia;
+use santosAgencia;
 
 CREATE TABLE Clientes (
-data_nasci_clientes VARCHAR(50),
-cpf_clientes VARCHAR(50),
+id_clientes int PRIMARY KEY auto_increment,
 nome_clientes VARCHAR(50),
-id_clientes VARCHAR(50) PRIMARY KEY
-)
+cpf_clientes VARCHAR(50),
+data_nasci_clientes VARCHAR(50)
+);
 
 CREATE TABLE Viagens (
-data_destino_viagens VARCHAR(50),
+id_viagens int PRIMARY KEY auto_increment,
 origem_viagens VARCHAR(50),
-data_origem_viagens VARCHAR(50),
+data_destino_viagens VARCHAR(50),
 destino_viagens VARCHAR(50),
-id_viagens VARCHAR(50) PRIMARY KEY
-)
+data_origem_viagens VARCHAR(50)
+);
 
 CREATE TABLE Compra (
-id_clientes VARCHAR(10),
-id_viagens VARCHAR(10),
+id_clientes int,
+id_viagens int,
 FOREIGN KEY(id_clientes) REFERENCES Clientes (id_clientes),
 FOREIGN KEY(id_viagens) REFERENCES Viagens (id_viagens)
-)
+);
 

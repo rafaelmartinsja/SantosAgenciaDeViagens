@@ -176,5 +176,25 @@ public class ViagensDAO {
 				}
 			}
 		}
+
+		public static Viagens[] setViagens() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		public void save(Viagens d1) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		public void removebyId(int id_viagens) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		public void update(Viagens d1) {
+			// TODO Auto-generated method stub
+			
+		}
 		
 }		
