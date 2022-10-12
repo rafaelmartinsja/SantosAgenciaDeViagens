@@ -1,0 +1,43 @@
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+main {
+    padding: 30px 0;
+    margin: 10px 0;
+    min-height: calc(100vh - 205px);
+}
+
+footer {
+    background-color: var(--bs-yellow);
+    padding: 15px;
+}
+
+footer p {
+    text-align: center;
+
+}
+
+.promocao-image-card {
+    object-fit: cover;
+    width: 320px;
+    height: 250px;
+}
+
+.card-img {
+    height: 100%;
+}
+
+.padding-h2 {
+    padding-top: 25px;
+    padding-bottom: 40px;
+}
+
+.centered {
+    margin: 0 auto !important;
+    float: none !important;
+}
+
+button .active {
+    background-color: yellow;
+}
