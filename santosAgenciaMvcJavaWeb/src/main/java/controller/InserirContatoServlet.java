@@ -1,8 +1,6 @@
 package controller;
 
 import java.io.IOException;
-import java.util.Date;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,9 +19,9 @@ public class InserirContatoServlet extends HttpServlet {
 
 		// recebendo os dados do formulario via parametro
 		String origem_viagens = request.getParameter("origem_viagens");
-		double data_origem_viagens = Integer.parseInt(request.getParameter("data_origem_viagens"));
+		String data_origem_viagens = request.getParameter(request.getParameter("data_origem_viagens"));
 		String destino_viagens = request.getParameter("destino_viagens");
-		double data_destino_viagens = Integer.parseInt(request.getParameter("data_destino_viagens"));
+		String data_destino_viagens = request.getParameter("data_destino_viagens"); 
 		
 		// criando o objeto contato
 		Viagens objContato = new Viagens();

@@ -1,6 +1,5 @@
 package model;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -27,11 +26,11 @@ public class ViagensDAO {
 			// Adiciona o valor do primeiro parâmetro da sql
 			pstm.setString(1, viagens.getOrigem_viagens());
 			// Adicionar o valor do segundo parâmetro da sql
-			pstm.setDate(2, (Date) viagens.getData_origem_viagens());
+			pstm.setString(2, viagens.getData_origem_viagens());
 			// Adiciona o valor do terceiro parâmetro da sql
 			pstm.setString(3, viagens.getDestino_viagens());
 			// Adiciona o valor do quarto parâmetro da sql
-			pstm.setDate(4, new Date(viagens.getData_origem_viagens().getTime()));
+			pstm.setString(4, viagens.getData_origem_viagens());
 			
 			
 			// Executa a sql para inserção dos dados
@@ -110,11 +109,11 @@ public class ViagensDAO {
 			// Adiciona o valor do primeiro parâmetro da sql
 			pstm.setString(1, viagens.getOrigem_viagens());
 			// Adicionar o valor do segundo parâmetro da sql
-			pstm.setDate(2, (Date) viagens.getData_origem_viagens());
+			pstm.setString(2, viagens.getData_origem_viagens());
 			// Adiciona o valor do terceiro parâmetro da sql
 			pstm.setString(3, viagens.getDestino_viagens());
 			// Adiciona o valor do quarto parâmetro da sql
-			pstm.setDate(4, new Date(viagens.getData_origem_viagens().getTime()));
+			pstm.setString(4, viagens.getData_origem_viagens());
 
 			pstm.setInt(5, viagens.getId_viagens());
 
@@ -173,13 +172,13 @@ public class ViagensDAO {
 				viagens.setOrigem_viagens(rset.getString("origem_viagens"));
 
 				// Recupera a idade do banco e atribui ele ao objeto
-				viagens.setData_origem_viagens(rset.getDate("data_destino_viagens"));
+				viagens.setData_origem_viagens(rset.getString("data_destino_viagens"));
 
 				// Recupera a data do banco e atribui ela ao objeto
 				viagens.setDestino_viagens(rset.getString("destino_viagens"));
 				
 				// Recupera a idade do banco e atribui ele ao objeto
-				viagens.setData_destino_viagens(rset.getDate("data_destino_viagens"));
+				viagens.setData_destino_viagens(rset.getString("data_destino_viagens"));
 
 				// Adiciono o viagens recuperado, a lista de viagenss
 				viagenss.add(viagens);
@@ -231,9 +230,9 @@ public class ViagensDAO {
 			rset.next();
 
 			viagens.setOrigem_viagens(rset.getString("origem_viagens"));
-			viagens.setData_origem_viagens(rset.getDate("data_origem_viagens"));
+			viagens.setData_origem_viagens(rset.getString("data_origem_viagens"));
 			viagens.setDestino_viagens(rset.getString("destino_viagens"));
-			viagens.setData_destino_viagens(rset.getDate("data_destino_viagens"));
+			viagens.setData_destino_viagens(rset.getString("data_destino_viagens"));
 			viagens.setId_viagens(rset.getInt("id_viagens"));
 
 		} catch (Exception e) {
@@ -254,5 +253,10 @@ public class ViagensDAO {
 			}
 		}
 		return viagens;
+	}
+
+	public List<Viagens> getviagens() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

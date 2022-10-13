@@ -1,8 +1,6 @@
 package controller;
 
 import java.io.IOException;
-import java.util.Date;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -35,9 +33,9 @@ public class AlterarContatoServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Viagens contatoAlterado = new Viagens();		
 		contatoAlterado.setOrigem_viagens(req.getParameter("origem_viagens"));
-		contatoAlterado.setData_origem_viagens(Date.(req.getParameter("data_origem_viagens")));
-		contatoAlterado.setDestino_viagens(req.getParameter(destino_viagens));
-		contatoAlterado.setData_destino_viagens(req.getDate(req.getParameter("data_origem_viagens")));
+		contatoAlterado.setOrigem_viagens(req.getParameter("data_origem_viagens"));
+		contatoAlterado.setDestino_viagens(req.getParameter("destino_viagens"));
+		contatoAlterado.setOrigem_viagens(req.getParameter("data_origem_viagens"));
 		contatoAlterado.setId_viagens(Integer.parseInt(req.getParameter("id_viagens")));
 				
 		ViagensDAO cd = new ViagensDAO();
