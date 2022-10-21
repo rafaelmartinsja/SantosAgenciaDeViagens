@@ -1,0 +1,292 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%> 
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="jstl" %>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+	crossorigin="anonymous">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+	crossorigin="anonymous"></script>
+<!-- Bootstrap Icons-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<!--Favicon-->
+<link rel="apple-touch-icon" sizes="57x57"
+	href="img/ico/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60"
+	href="img/ico/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72"
+	href="img/ico/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76"
+	href="img/ico/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114"
+	href="img/ico/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120"
+	href="img/ico/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144"
+	href="img/ico/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152"
+	href="img/ico/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180"
+	href="img/ico/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"
+	href="img/ico/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32"
+	href="img/ico/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96"
+	href="img/ico/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16"
+	href="img/ico/favicon-16x16.png">
+<link rel="manifest" href="img/ico/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage"
+	content="img/ico/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
+	rel="stylesheet">
+<!-- Meu css -->
+<link rel="stylesheet" href="/css/style.css">
+
+<title>Santos Agência de Viagens</title>
+</head>
+
+<body>
+	<!--Menu do site-->
+	<nav class="navbar navbar-expand-lg bg-light">
+		<div class="container-fluid">
+			<img src="/img/santosAgenciaDeViagens.svg" width="100"
+				alt="Logo Agência Santos"> <a class="navbar-brand" href="#">Santos
+				Agência de Viagens</a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="index.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="#destino">Destino</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#promocoes">Promoções</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#contato">Contato</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="cadastro.jsp">CRUD</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Slide -->
+	<div id="carouselExampleCaptions" class="carousel slide"
+		data-bs-ride="false">
+		<div class="carousel-indicators">
+			<button type="button" data-bs-target="#carouselExampleCaptions"
+				data-bs-slide-to="0" class="active" aria-current="true"
+				aria-label="Slide 1"></button>
+			<button type="button" data-bs-target="#carouselExampleCaptions"
+				data-bs-slide-to="1" aria-label="Slide 1"></button>
+			<button type="button" data-bs-target="#carouselExampleCaptions"
+				data-bs-slide-to="2" aria-label="Slide 2"></button>
+			<button type="button" data-bs-target="#carouselExampleCaptions"
+				data-bs-slide-to="3" aria-label="Slide 3"></button>
+			<button type="button" data-bs-target="#carouselExampleCaptions"
+				data-bs-slide-to="4" aria-label="Slide 4"></button>
+		</div>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="./img/brasil-rio-de-janeiro.jpeg" class="d-block w-100"
+					alt="...">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>Rio de Janeiro</h5>
+					<p>Conheça a cidade maravilhosa.</p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="./img/brasil-salvador.jpeg" class="d-block w-100"
+					alt="...">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>Salvador</h5>
+					<p>Cultura por todo lado, alegria, natureza, energia sem igual.</p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="./img/brasil-cataratas-do-iguacu.jpeg"
+					class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>Foz do Iguaçu</h5>
+					<p>Uma das maiores cataratas do mundo, venha conhecer as
+						supresas do lugar.</p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="./img/brasil-curitiba.jpeg" class="d-block w-100"
+					alt="...">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>Curitiba</h5>
+					<p>Arquitetura sem igual, atrações túristicas e muita cultura.</p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="./img/brasil-brasilia.jpeg" class="d-block w-100"
+					alt="...">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>Brasília</h5>
+					<p>Capital do Brasil, uma obra de arte de Oscar Niemeyer,
+						visite já!</p>
+				</div>
+			</div>
+		</div>
+		<button class="carousel-control-prev" type="button"
+			data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+				class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button"
+			data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span> <span
+				class="visually-hidden">Next</span>
+		</button>
+	</div>
+
+	<!-- Agendar Viagem -->
+	<main>
+		<h2 id="destino" class="text-center padding-h2">Agende sua
+			viagem!</h2>
+		<div>
+
+			<form class="container my-3">
+				<div class="col">
+				<form action="Inserir" method="post" class="form-control">
+			<fieldset>
+				<legend>Cadastre a sua Viagem</legend>
+
+				<p>
+					<label for="destino">Destino:</label> <input type="text" id="destino"
+						name="destino" size="50" class="form-control" required>
+				</p>
+
+				<p>
+					<label for="date">Data Destino:</label> <input type="date"
+						id="date" name="data_destino" size="10" class="form-control" required>
+				</p>
+				
+				<p>
+					<label for="origem">Origem:</label> <input type="text" id="origem"
+						name="origem" size="50" class="form-control" required>
+				</p>
+				
+				<p>
+					<label for="date">Data Origem:</label> <input type="date"
+						id="date" name="data_origem" size="10" class="form-control" required>
+				</p>
+
+				<p>
+					<input type="submit" value="Cadastrar Cliente"
+						class="btn btn-primary">
+				</p>
+			</fieldset>
+		</form>
+		</div>
+
+		<!-- Promoções -->
+		<h2 id="promocoes" class="text-center padding-h2">Veja as
+			principais promoções</h2>
+
+		<div
+			class="container row d-flex justify-content-md-center text-center gap-3 centered">
+
+			<div class="card bg-dark promocao-image-card text-white">
+				<img src="./img/brasil-brasilia.jpeg" class="card-img"
+					alt="Brasília">
+				<div class="card-img-overlay">
+					<h5 class="card-title">Brasília</h5>
+					<p class="card-text">Áereo + 4 viajens</p>
+					<p class="card-text">Viagem em Dezembro de 2022</p>
+					<p class="card-text">R$ 4999,99</p>
+					<input class="btn btn-primary" type="button" value="Agendar">
+				</div>
+			</div>
+
+			<div class="card bg-dark promocao-image-card text-white">
+				<img src="./img/brasil-salvador.jpeg" class="card-img" alt="Bahia">
+				<div class="card-img-overlay">
+					<h5 class="card-title">Bahia</h5>
+					<p class="card-text">Áereo + 2 viajens</p>
+					<p class="card-text">Viagem em Janeiro de 2023</p>
+					<p class="card-text">R$ 3999,99</p>
+					<input class="btn btn-primary" type="button" value="Agendar">
+				</div>
+			</div>
+
+			<div class="card bg-dark promocao-image-card text-white">
+				<img src="./img/brasil-rio-de-janeiro.jpeg" class="card-img"
+					alt="...">
+				<div class="card-img-overlay">
+					<h5 class="card-title">Rio de Janeiro</h5>
+					<p class="card-text">Áereo + 2 viajens</p>
+					<p class="card-text">Viagem em Dezembro de 2022</p>
+					<p class="card-text">R$ 6999,99</p>
+					<input class="btn btn-primary" type="button" value="Agendar">
+				</div>
+			</div>
+		</div>
+
+		<!-- Form de contato-->
+		<div>
+			<h2 id="contato" class="text-center padding-h2">Entre em contato
+				conosco!</h2>
+			<form class="container" action="">
+				<div class="mb-3">
+					<label for="formGroupExampleInput" class="form-label">Nome:</label>
+					<input type="text" class="form-control" id="formGroupExampleInput"
+						placeholder="Informe o seu nome">
+				</div>
+				<div class="mb-3">
+					<label for="formGroupExampleInput2" class="form-label">E-mail</label>
+					<input type="email" class="form-control"
+						id="formGroupExampleInput2" placeholder="Informe o seu e-mail">
+				</div>
+				<div class="mb-3">
+					<label for="formGroupExampleInput2" class="form-label">Mensagem</label>
+					<textarea name="mensagem" class="form-control"
+						id="formGroupExampleInput2" cols="15" rows="5"
+						placeholder="Deixe a sua mensagem"></textarea>
+				</div>
+				<input class="btn btn-primary" type="submit" value="Enviar">
+				<input class="btn btn-primary" type="reset" value="Resetar">
+			</form>
+		</div>
+	</main>
+
+	<!-- Footer ou Rodapé do site -->
+	<footer class="text-center">
+		<p>Desenvolvido por Rafael Martins - 2022</p>
+	</footer>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+		crossorigin="anonymous"></script>
+
+</body>
+</html>
