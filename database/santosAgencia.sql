@@ -12,11 +12,11 @@ data_nasci_clientes VARCHAR(50)
 );
 
 CREATE TABLE Viagens (
-id_viagens int PRIMARY KEY auto_increment,
-origem_viagens VARCHAR(50),
-data_destino_viagens VARCHAR(50),
-destino_viagens VARCHAR(50),
-data_origem_viagens VARCHAR(50)
+id int PRIMARY KEY auto_increment,
+origem VARCHAR(50),
+data_destino VARCHAR(50),
+destino VARCHAR(50),
+data_origem VARCHAR(50)
 );
 
 CREATE TABLE Compra (
