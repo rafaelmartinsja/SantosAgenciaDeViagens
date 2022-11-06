@@ -1,0 +1,21 @@
+
+          <!--
+          <div class="mb-3">
+            <label for="inputState" class="form-label">Quartos</label>
+            <select id="inputState" class="form-select">
+              <option selected>Número de quartos</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="inputState" class="form-label">Hospedes</label>
+            <select id="inputState" class="form-select">
+              <option selected>Número de hóspedes</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+          </div>
+          -->

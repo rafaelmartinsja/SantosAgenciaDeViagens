@@ -1,0 +1,16 @@
+viagem
+id, destino, data_destino, origem, data_origem
+
+cliente
+id, nome, cpf, data_nascimento
+
+funcionario
+id, nome, cpf, data_nascimento
+
+Viagem
+Funcionario
+Cliente
+
+Cadastra a viagem na home, no link a parte acessa listar, editar, deletar.
+
+Gerar getters and setters e mais o que automático?
